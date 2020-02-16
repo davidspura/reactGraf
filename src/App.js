@@ -78,7 +78,7 @@ export class App extends Component {
       axisY: {
         title: "Počet zařízení",
         labelFormatter: function(e) {
-          return e.value / 2;
+          return e.value;
         }
       },
       toolTip: {
@@ -108,6 +108,7 @@ export class App extends Component {
         {
           type: "stackedColumn",
           name: "Celkem",
+          axisYType: "secondary",
           showInLegend: true,
           dataPoints: celkem
         }
