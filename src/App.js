@@ -57,7 +57,7 @@ export class App extends Component {
 
   render() {
     const newData = [...this.state.data];
-    const android = newData.map(data => {
+    const zdroj = newData.map(data => {
       return {
         name: moment(data.createdAt).calendar(null, {
           sameDay: "[Dnes]",
@@ -72,7 +72,7 @@ export class App extends Component {
         Celkem: data.androidTotal + data.iosTotal
       };
     });
-    const data = android;
+    const data = zdroj;
 
     return !this.state.data.length ? (
       <div className="container align-center">
